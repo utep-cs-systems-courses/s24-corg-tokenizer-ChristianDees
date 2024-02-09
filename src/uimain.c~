@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include "tokenizer.h"
+
+int main(){
+
+  char stringArg[100];
+  printf("> ");
+  fgets(stringArg, sizeof(stringArg), stdin);
+  char **token_array = tokenize(stringArg);
+  if(token_array == NULL){
+    printf("Failed to tokenize input string");
+  }
+  print_tokens(token_array);
+  
+  
+  return 0;
+}

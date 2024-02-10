@@ -1,14 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct s_Item{
-  int id;
-  char *str;
-  struct s_Item *next;
-}Item;
-typedef struct s_List{
-  struct s_Item *root;
-}List;
+#include "history.h"
 
 
 // Initialize LL
@@ -76,7 +68,7 @@ char *get_history(List *list, int id){
   Item *temp = list->root;
   // edgecase for id request
   if(id < 1){
-    printf("id is not within bounds");
+    printf("id is not within bounds\n");
     return NULL;
   }
   // find item with requested id
@@ -85,7 +77,7 @@ char *get_history(List *list, int id){
 
   // if no items with requested id is in list
   if(temp==NULL){
-    printf("No item with that id found");
+    printf("No item with that id found\n");
     return NULL;
   }
   // return the string the item with requested id has

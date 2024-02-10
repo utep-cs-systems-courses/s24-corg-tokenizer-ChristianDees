@@ -132,7 +132,6 @@ void print_tokens(char **tokens){
     printf("%s\n", tokens[index]);   // print current pointer that is being pointed to
     index++;
   }
-  free_tokens(tokens);   // free the allocated memory
 }
 
 /* Frees all tokens and the vector containing themx. */

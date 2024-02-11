@@ -66,18 +66,13 @@ void add_history(List *list, char *str){
 char *get_history(List *list, int id){
 
   Item *temp = list->root;
-  // edgecase for id request
-  if(id < 1){
-    printf("id is not within bounds\n");
-    return NULL;
-  }
   // find item with requested id
   while(temp!=NULL && temp->id != id)
     temp = temp->next;
 
   // if no items with requested id is in list
   if(temp==NULL){
-    printf("No item with that id found\n");
+    printf("-history: !%d: event not found\n",id);
     return NULL;
   }
   // return the string the item with requested id has
@@ -95,7 +90,7 @@ void print_history(List *list){
   Item *current = list->root;
   // iterate through every item within list
   while(current != NULL){
-    printf("%d %s\n", current->id, current->str);
+    printf("%4d  %s\n", current->id, current->str);
     current = current->next;
   }
  

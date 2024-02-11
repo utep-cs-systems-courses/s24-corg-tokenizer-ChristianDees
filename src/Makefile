@@ -1,6 +1,6 @@
 OBJS = tokenizer.o history.o uimain.o
 
-$FLAGS =-g -03
+CFLAGS = -g -O3
 
 all: myProgram
 

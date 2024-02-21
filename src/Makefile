@@ -10,7 +10,8 @@ myProgram: $(OBJS)
 $(OBJS): tokenizer.h history.h
 
 clean:
-	rm -f *.o myProgram
+
+	rm -f *.c# *.c~ *.o myProgram
 
 run:myProgram
 	./myProgram

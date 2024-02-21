@@ -4,7 +4,7 @@
 
 This project creates a tokenzier composed of the users input utilizing an
 array of pointers to each token within the user's input. This project also
-utilizes a linked list data structure to create a history of the user's input
+uses a linked list data structure to create a history of the user's input
 that is printable and callable by id.
 
 ## Compilation
